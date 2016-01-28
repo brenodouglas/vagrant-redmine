@@ -99,7 +99,8 @@ upstream redmine_upstream {
 }
 
 server {
-        listen 80;
+        listen 80 default_server;
+  	    server_name _;
         server_name 127.0.0.1;
         root /usr/share/redmine/public;
 
